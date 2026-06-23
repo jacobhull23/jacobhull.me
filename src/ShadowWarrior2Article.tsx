@@ -30,7 +30,7 @@ export default function ShadowWarrior2Article() {
       </p>
 
       <p>
-        Thankfully it provides plenty of variation in this regard. Weapons take centre stage as you quickly switch between a medley of different types: shotguns, pistols, and automatics – some of which can be dual-wielded – fill out the basic categories, while otherworldly weapons like an electrocuted grenade launcher and a green machine gun that looks like something straight out of a 70s sci-fi movie provide some variation. Swords can also be used, including some Wolverine-like fist blades that allow you to dance like a ballerina while painting a canvas of blood, almost like you’re finishing in the arabesque position.
+        Thankfully it provides plenty of variation in this regard. Weapons take center stage as you quickly switch between a medley of different types: shotguns, pistols, and automatics – some of which can be dual-wielded – fill out the basic categories, while otherworldly weapons like an electrocuted grenade launcher and a green machine gun that looks like something straight out of a 70s sci-fi movie provide some variation. Swords can also be used, including some Wolverine-like fist blades that allow you to dance like a ballerina while painting a canvas of blood, almost like you’re finishing in the arabesque position.
       </p>
 
       <img 
@@ -42,7 +42,7 @@ export default function ShadowWarrior2Article() {
       <h3>Wang of Four</h3>
 
       <p>
-        It’s about how you utilise each weapon, rather than sticking to one or two. Weapons level up separately which forces alteration, but different weapons provide plenty of encouragement for mixing-it-up anyway with each one proving useful in different situations. And let’s not forget that Wang is bringing some friends along for the ride. Each of these procedurally generated levels can also be played with three other friends in the new online co-operative mode which is bound to keep the anarchy reigning if you so desire.
+        It’s about how you utilize each weapon, rather than sticking to one or two. Weapons level up separately which forces alteration, but different weapons provide plenty of encouragement for mixing-it-up anyway with each one proving useful in different situations. And let’s not forget that Wang is bringing some friends along for the ride. Each of these procedurally generated levels can also be played with three other friends in the new online co-operative mode which is bound to keep the anarchy reigning if you so desire.
       </p>
 
       <p>

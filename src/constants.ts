@@ -10,7 +10,7 @@ export const EXPERIENCES: Experience[] = [
     description: 'Leading cross-functional delivery across globally distributed teams on live and in-development titles, including VALORANT and 2XKO.',
     achievements: [
       'Owned regional delivery for 2XKO in Sydney, driving development from Closed Beta through launch and into live operations',
-      'Led player-facing systems across personalisation, social, and Trust & Safety domains, partnering with engineering, product, legal, and compliance',
+      'Led player-facing systems across personalization, social, and Trust & Safety domains, partnering with engineering, product, legal, and compliance',
       'Coordinated multi-region teams (US, APAC) to deliver platform systems, compliance features, and live service capabilities at scale'
     ]
   },
@@ -46,7 +46,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: 'https://lh3.googleusercontent.com/d/1V7BU2-IqNBlgmLO7ZRoknoN8Ysr4vhef',
     role: 'Product Manager',
     period: '2017–2020',
-    description: 'Early team member shaping product direction and delivery for a data visualisation platform from concept through scale.',
+    description: 'Early team member shaping product direction and delivery for a data visualization platform from concept through scale.',
     achievements: [
       'Defined product vision and core user experience, working directly with engineers on platform systems and architecture',
       'Established delivery processes and workflows in an R&D environment, enabling scalable product development',
@@ -77,9 +77,9 @@ export const PROJECTS: Project[] = [
     id: 'p1',
     title: 'VALORANT',
     role: 'Producer II',
-    focusArea: 'Personalisation & Player Expression',
+    focusArea: 'Personalization & Player Expression',
     year: '2025–Present · Live',
-    description: 'Led cross-functional delivery of systems enabling player identity and expression across a global player base. Balanced player motivation, engagement, and monetisation to support long-term retention and meaningful player choice.',
+    description: 'Led cross-functional delivery of systems enabling player identity and expression across a global player base. Balanced player motivation, engagement, and monetization to support long-term retention and meaningful player choice.',
     tags: ['Riot Games', 'Tactical Shooter', 'Live Ops'],
     imageUrl: 'https://assetsio.gnwcdn.com/valorant-review-exacting-infuriating-sublime-1593424502084.jpg?width=1200&height=600&fit=crop&enable=upscale&auto=webp',
     studioLogoUrl: 'https://img.icons8.com/color/512/riot-games.png',
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
     platforms: ['PC', 'PS5'],
     videoUrl: 'https://www.youtube.com/watch?v=D4JVY8rR-XQ',
     websiteUrl: 'https://store.steampowered.com/app/2863680/ZERO_PARADES_For_Dead_Spies/',
-    criticScore: 83,
+    criticScore: 84,
     criticUrl: 'https://opencritic.com/game/20490/zero-parades-for-dead-spies'
   },
   {
@@ -185,7 +185,7 @@ export const PROJECTS: Project[] = [
     title: 'Timeline Platform',
     role: 'Product Manager',
     year: '2017–2020 · In Development',
-    description: 'Defined product direction and led development of a data visualisation platform from concept through delivery. Worked closely with engineers to shape core features, user experience, and scalable product foundations.',
+    description: 'Defined product direction and led development of a data visualization platform from concept through delivery. Worked closely with engineers to shape core features, user experience, and scalable product foundations.',
     tags: ['KPV LAB', 'Data Vis', 'Platform'],
     imageUrl: 'https://uwaterloo.ca/writing-and-communication-centre/sites/default/files/uploads/images/old_books.jpg',
     studioLogoUrl: 'https://lh3.googleusercontent.com/d/1V7BU2-IqNBlgmLO7ZRoknoN8Ysr4vhef',
