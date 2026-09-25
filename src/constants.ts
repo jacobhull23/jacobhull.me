@@ -7,7 +7,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/riot-games.webp',
     role: 'Producer II',
     period: '2025–Present',
-    description: 'Leading cross-functional delivery across globally distributed teams on live and in-development titles, including VALORANT and 2XKO.',
+    description: 'Owning player-facing product areas (personalization, social, and Trust & Safety) across VALORANT and 2XKO, and regional delivery for 2XKO from Closed Beta through launch and live operations.',
     achievements: [
       'Owned regional delivery for 2XKO in Sydney, driving development from Closed Beta through launch and into live operations',
       'Led player-facing systems across personalization, social, and Trust & Safety domains, partnering with engineering, product, legal, and compliance',
@@ -20,7 +20,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/za-um-studio.webp',
     role: 'Senior Producer',
     period: '2022–2025',
-    description: 'Joined at project inception to help shape product direction and establish scalable production systems across a globally distributed studio.',
+    description: 'Brought in at inception to shape the product and production structure of Zero Parades from the ground up, across a globally distributed team of 70–80 people.',
     achievements: [
       'Designed and implemented a cross-functional operating model, aligning ~70 developers into Agile feature teams',
       'Improved delivery predictability and reduced roadmap timelines by transitioning from waterfall to cross-functional execution',
@@ -33,7 +33,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/tt-games.webp',
     role: 'Associate Producer',
     period: '2020–2022',
-    description: 'Delivered large-scale AAA titles within a multi-team production environment, working across internal teams and external licensors.',
+    description: 'Delivered LEGO Star Wars: The Skywalker Saga across multiple internal teams, managing dependencies, milestones, and approvals with Lucasfilm, Disney, Warner Bros., and LEGO.',
     achievements: [
       'Coordinated cross-functional teams (LEGO, Audio, VFX, gameplay) to deliver LEGO Star Wars: The Skywalker Saga',
       'Managed dependencies, milestone planning, and stakeholder alignment across complex production pipelines',
@@ -46,7 +46,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/kpv-lab.webp',
     role: 'Product Manager',
     period: '2017–2020',
-    description: 'Early team member shaping product direction and delivery for a data visualization platform from concept through scale.',
+    description: 'Product Manager for a data visualization platform: set the product vision and core UX, built the team, and took it from early concept to a funded product.',
     achievements: [
       'Defined product vision and core user experience, working directly with engineers on platform systems and architecture',
       'Established delivery processes and workflows in an R&D environment, enabling scalable product development',
@@ -96,7 +96,7 @@ export const CAPABILITIES: Capability[] = [
   {
     id: 'live-products',
     title: 'Live Products & Player Systems',
-    description: 'Personalization, social, and Trust & Safety systems for a global player base, from Closed Beta through launch and live operations, with engineering, legal, and compliance.',
+    description: 'Personalization, social, and Trust & Safety systems for VALORANT\'s 70M+ monthly players and 2XKO, from Closed Beta through launch and live operations, with engineering, legal, and compliance.',
     evidence: 'Riot Games · VALORANT · 2XKO'
   }
 ];

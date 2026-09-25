@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Experience } from '../../types';
 import { cn } from '../../lib/utils';
@@ -20,7 +20,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
     <motion.div 
       key={exp.id}
       {...fadeIn}
-      className="group relative pl-12 border-l-2 border-primary/10 hover:border-primary transition-colors pb-12 last:pb-0"
+      className="group relative pl-8 md:pl-12 border-l-2 border-primary/10 hover:border-primary transition-colors pb-10 last:pb-0"
       whileInView="active"
       whileHover="active"
       viewport={{ margin: "-30% 0px -30% 0px" }}
@@ -31,11 +31,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
           active: { backgroundColor: '#fb5057' }
         }}
       />
-      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+      <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 md:gap-4 mb-3">
         <div className="flex items-center gap-4">
           {exp.logoUrl && (
             <div className={cn(
-              "h-16 w-16 shrink-0 flex items-center justify-center overflow-hidden",
+              "h-12 w-12 shrink-0 flex items-center justify-center overflow-hidden",
               exp.company === 'Riot Games' && "rounded-full"
             )}>
               <img 
@@ -66,19 +66,27 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
           {exp.period}
         </motion.div>
       </div>
-      <p className="text-foreground/75 mb-6 max-w-2xl font-medium">
+      <p className="text-foreground/75 mb-4 max-w-2xl font-medium leading-relaxed">
         {exp.description}
       </p>
-      <div className="grid grid-cols-1 gap-y-3">
-        {exp.achievements.map((achievement, idx) => (
-          <div key={idx} className="flex items-start gap-3 text-sm">
-            <div className="mt-1.5 h-1.5 w-1.5 bg-primary/40 shrink-0" />
-            <span className="opacity-80 leading-relaxed">{achievement}</span>
-          </div>
-        ))}
-      </div>
+      {/* Detail bullets stay available but collapsed: the Approach section and
+          project banners carry the headline story. */}
+      <details className="group/details max-w-2xl">
+        <summary className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-foreground/70 hover:text-primary cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+          Key contributions
+          <ChevronDown className="h-3 w-3 transition-transform group-open/details:rotate-180" />
+        </summary>
+        <div className="grid grid-cols-1 gap-y-3 pt-4">
+          {exp.achievements.map((achievement, idx) => (
+            <div key={idx} className="flex items-start gap-3 text-sm">
+              <div className="mt-1.5 h-1.5 w-1.5 bg-primary/40 shrink-0" />
+              <span className="opacity-80 leading-relaxed">{achievement}</span>
+            </div>
+          ))}
+        </div>
+      </details>
       {exp.link && (
-        <div className="mt-6 pt-6 border-t border-primary/5">
+        <div className="mt-4 pt-4 border-t border-primary/5">
           <Link 
             to={exp.link.url}
             className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:gap-3 transition-all group/link"
