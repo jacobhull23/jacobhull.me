@@ -1,4 +1,4 @@
-import { Experience, Project, Writing } from './types';
+import { Capability, Experience, Project, Writing } from './types';
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -7,7 +7,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/riot-games.webp',
     role: 'Producer II',
     period: '2025–Present',
-    description: 'Leading cross-functional delivery across globally distributed teams on live and in-development titles, including VALORANT and 2XKO.',
+    description: 'Owning player-facing product areas (personalization, social, and Trust & Safety) across VALORANT and 2XKO, and regional delivery for 2XKO from Closed Beta through launch and live operations.',
     achievements: [
       'Owned regional delivery for 2XKO in Sydney, driving development from Closed Beta through launch and into live operations',
       'Led player-facing systems across personalization, social, and Trust & Safety domains, partnering with engineering, product, legal, and compliance',
@@ -20,7 +20,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/za-um-studio.webp',
     role: 'Senior Producer',
     period: '2022–2025',
-    description: 'Joined at project inception to help shape product direction and establish scalable production systems across a globally distributed studio.',
+    description: 'Brought in at inception to shape the product and production structure of Zero Parades from the ground up, across a globally distributed team of 70–80 people.',
     achievements: [
       'Designed and implemented a cross-functional operating model, aligning ~70 developers into Agile feature teams',
       'Improved delivery predictability and reduced roadmap timelines by transitioning from waterfall to cross-functional execution',
@@ -33,7 +33,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/tt-games.webp',
     role: 'Associate Producer',
     period: '2020–2022',
-    description: 'Delivered large-scale AAA titles within a multi-team production environment, working across internal teams and external licensors.',
+    description: 'Delivered LEGO Star Wars: The Skywalker Saga across multiple internal teams, managing dependencies, milestones, and approvals with Lucasfilm, Disney, Warner Bros., and LEGO.',
     achievements: [
       'Coordinated cross-functional teams (LEGO, Audio, VFX, gameplay) to deliver LEGO Star Wars: The Skywalker Saga',
       'Managed dependencies, milestone planning, and stakeholder alignment across complex production pipelines',
@@ -46,7 +46,7 @@ export const EXPERIENCES: Experience[] = [
     logoUrl: '/images/logos/kpv-lab.webp',
     role: 'Product Manager',
     period: '2017–2020',
-    description: 'Early team member shaping product direction and delivery for a data visualization platform from concept through scale.',
+    description: 'Product Manager for a data visualization platform: set the product vision and core UX, built the team, and took it from early concept to a funded product.',
     achievements: [
       'Defined product vision and core user experience, working directly with engineers on platform systems and architecture',
       'Established delivery processes and workflows in an R&D environment, enabling scalable product development',
@@ -72,12 +72,42 @@ export const EXPERIENCES: Experience[] = [
   }
 ];
 
+// How game production work maps onto product management. Every claim here
+// is backed by an EXPERIENCES entry above; keep the two in sync.
+export const CAPABILITIES: Capability[] = [
+  {
+    id: 'direction',
+    title: 'Product Direction & Vision',
+    description: 'Shaping what gets built and why. Defined product vision and core user experience as a PM, and helped shape product direction from inception on a new isometric RPG.',
+    evidence: 'KPV LAB · ZA/UM'
+  },
+  {
+    id: 'roadmaps',
+    title: 'Roadmaps & Prioritization',
+    description: 'Balancing player motivation, engagement, and monetization, and partnering with leadership on scope, planning, and resource trade-offs.',
+    evidence: 'Riot Games · ZA/UM'
+  },
+  {
+    id: 'operating-models',
+    title: 'Teams & Operating Models',
+    description: 'Moved a ~70-developer studio from waterfall to cross-functional Agile feature teams, improving predictability and shortening roadmap timelines. Coached 4 producers.',
+    evidence: 'ZA/UM'
+  },
+  {
+    id: 'live-products',
+    title: 'Live Products & Player Systems',
+    description: 'Personalization, social, and Trust & Safety systems for VALORANT and 2XKO, reaching tens of millions of monthly players, from Closed Beta through launch and live operations, with engineering, legal, and compliance.',
+    evidence: 'Riot Games · VALORANT · 2XKO'
+  }
+];
+
 export const PROJECTS: Project[] = [
   {
     id: 'p1',
     title: 'VALORANT',
     role: 'Producer II',
     focusArea: 'Personalization & Player Expression',
+    outcome: 'Player identity and expression systems for tens of millions of monthly players globally.',
     year: '2025–Present · Live',
     description: 'Led cross-functional delivery of systems enabling player identity and expression across a global player base. Balanced player motivation, engagement, and monetization to support long-term retention and meaningful player choice.',
     tags: ['Riot Games', 'Tactical Shooter', 'Live Ops'],
@@ -98,7 +128,8 @@ export const PROJECTS: Project[] = [
     title: '2XKO',
     role: 'Producer II',
     focusArea: 'Social, Safety & Trust Systems',
-    year: '2025–Present · Live',
+    outcome: 'Tuned the early-game flow on player data in Early Access, ahead of a console launch among the month\'s most-downloaded free-to-play games.',
+    year: '2025–Present · Launched',
     description: 'Led regional delivery in Sydney, driving cross-functional development from Closed Beta through launch and into live operations. Worked closely with player communities and global teams to shape safety, reporting, and social systems at scale.',
     tags: ['Riot Games', 'Fighting Game', 'Competitive'],
     imageUrl: '/images/projects/2xko.webp',
@@ -117,9 +148,10 @@ export const PROJECTS: Project[] = [
     id: 'p3',
     title: 'ZERO PARADES',
     role: 'Senior Producer',
-    focusArea: 'Core Development',
+    focusArea: 'Product & Production Structure',
+    outcome: '5/5 Eurogamer\u00a0· 100/100 The New York Times (Critic\'s Pick)\u00a0· 9/10 Destructoid',
     year: '2022–2025 · Released',
-    description: 'Established production structure and delivery processes for a globally distributed team building a new isometric RPG. Worked closely with leadership to align scope, teams, and workflows during early-stage development and into full production.',
+    description: 'Brought in at inception to shape the product and production structure for a globally distributed team of 70–80 building a new isometric RPG. Worked closely with leadership to align scope, teams, and workflows during early-stage development and into full production.',
     tags: ['ZA/UM', 'Narrative', 'RPG'],
     imageUrl: '/images/projects/zero-parades.webp',
     studio: 'ZA/UM',
@@ -138,6 +170,7 @@ export const PROJECTS: Project[] = [
     title: 'Disco Elysium',
     role: 'Technical Producer',
     focusArea: 'Post-Launch',
+    outcome: 'Post-launch updates shipped across PC, consoles, and mobile.',
     year: '2022–2024 · Post-Launch',
     description: 'Led technical delivery of post-launch content, including new dialogue, voice integration, and additional features. Coordinated creative and technical teams to ship updates while maintaining quality and stylistic consistency.',
     tags: ['ZA/UM', 'RPG', 'Live Ops'],
@@ -158,6 +191,7 @@ export const PROJECTS: Project[] = [
     title: 'LEGO Star Wars: The Skywalker Saga',
     role: 'Associate Producer',
     focusArea: 'Multi-Team Delivery',
+    outcome: 'Shipped on 6 platforms, with approvals from Lucasfilm, Disney, Warner Bros., and LEGO.',
     year: '2020–2022 · Released',
     description: 'Coordinated delivery across multiple discipline teams on a large-scale licensed title, supporting milestone planning and execution. Managed dependencies and stakeholder alignment, including collaboration with external licensors.',
     tags: ['TT Games', 'Action-Adventure', 'Open World'],
@@ -184,19 +218,23 @@ export const PROJECTS: Project[] = [
     imageUrl: '/images/projects/lego-unannounced.webp',
     studio: 'Traveller\'s Tales',
     studioLogoUrl: '/images/logos/travellers-tales.webp',
-    color: '#ffd500'
+    color: '#ffd500',
+    compact: true
   },
   {
     id: 'p6',
     title: 'Timeline Platform',
     role: 'Product Manager',
+    focusArea: 'Product Vision & UX',
+    outcome: 'Took the platform from early concept to a funded product, and built the team behind it.',
     year: '2017–2020 · Shipped',
     description: 'Defined product direction and led development of a data visualization platform from concept through delivery. Worked closely with engineers to shape core features, user experience, and scalable product foundations.',
     tags: ['KPV LAB', 'Data Vis', 'Platform'],
     imageUrl: '/images/projects/timeline-platform.webp',
     studio: 'KPV LAB',
     studioLogoUrl: '/images/logos/kpv-lab.webp',
-    color: '#0ea5e9'
+    color: '#0ea5e9',
+    compact: true
   }
 ];
 

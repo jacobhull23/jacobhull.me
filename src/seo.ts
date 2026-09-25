@@ -13,7 +13,7 @@ export const PAGE_META: Record<string, PageMeta> = {
   '/': {
     title: 'Jacob Hull | Game Producer & Product Manager',
     description:
-      'Jacob Hull is a Producer II at Riot Games working on VALORANT and 2XKO, previously at ZA/UM (Disco Elysium, Zero Parades) and TT Games (LEGO Star Wars: The Skywalker Saga).',
+      'Product-minded game producer: Producer II at Riot Games (VALORANT, 2XKO), previously ZA/UM, TT Games, and Product Manager at KPV LAB. Product direction, roadmaps, and cross-functional delivery.',
     image: DEFAULT_IMAGE,
     type: 'website',
   },

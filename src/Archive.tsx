@@ -63,7 +63,7 @@ export default function Archive() {
             <h1 className="font-display text-6xl md:text-8xl font-bold tracking-tighter uppercase mb-6 leading-[0.85]">
               The <span className="text-primary">Archive</span>
             </h1>
-            <p className="text-xl text-[#151927]/60 max-w-2xl font-medium leading-relaxed">
+            <p className="text-xl text-[#151927]/75 max-w-2xl font-medium leading-relaxed">
               A comprehensive collection of my published work across games, technology, and culture — spanning reviews, features, and industry news.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function Archive() {
                   className={`px-4 py-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border cursor-pointer ${
                     activeCategory === cat 
                       ? 'bg-[#151927] text-white border-[#151927]' 
-                      : 'bg-transparent text-[#151927]/60 border-[#151927]/10 hover:border-[#151927]/40'
+                      : 'bg-transparent text-[#151927]/75 border-[#151927]/10 hover:border-[#151927]/40'
                   }`}
                 >
                   {cat}
@@ -129,7 +129,7 @@ export default function Archive() {
                 </>
               ) : (
                 <div className="py-24 text-center">
-                  <p className="text-[#151927]/40 font-mono uppercase tracking-widest text-xs">No articles found matching your criteria.</p>
+                  <p className="text-[#151927]/70 font-mono uppercase tracking-widest text-xs">No articles found matching your criteria.</p>
                 </div>
               )}
             </AnimatePresence>

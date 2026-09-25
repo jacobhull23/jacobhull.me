@@ -22,15 +22,33 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex-1 lg:max-w-[60%]"
           >
-            <h1 className="font-display text-6xl md:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter uppercase mb-10 translate-x-[-0.05em]">
-              Game Producer & <br />
-              <span className="text-primary">Product Manager</span>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-px w-12 bg-primary" />
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Producer II · Riot Games</p>
+            </div>
+            <h1 className="font-display text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter uppercase mb-10 translate-x-[-0.05em]">
+              Game Producer <br />
+              & <span className="text-primary">Product Manager</span>
             </h1>
             <div className="flex flex-col gap-8">
-              <p className="text-xl md:text-2xl font-medium max-w-xl leading-snug">
-                Leading cross-functional teams to build and ship world-class digital products, social systems, and impactful user experiences.
+              <p className="text-xl md:text-2xl font-medium max-w-2xl leading-snug">
+                Product-minded producer with 10 years across AAA games and software. I set product direction, prioritize roadmaps, and lead cross-functional teams from concept through launch and live operations.
               </p>
-              
+              {/* Credits strip: the recognizable titles, visible in the first screen */}
+              <div className="flex flex-col gap-3">
+                <span className="text-[11px] font-mono uppercase tracking-widest opacity-70">Credits include</span>
+                <ul className="flex flex-wrap items-center gap-2">
+                  {['VALORANT', '2XKO', 'Zero Parades', 'Disco Elysium', 'LEGO Star Wars: The Skywalker Saga'].map((title) => (
+                    <li
+                      key={title}
+                      className="flex items-center h-8 px-3 border border-foreground/15 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] leading-none"
+                    >
+                      {title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Call to Actions - CV Download and Contact */}
               <div className="flex flex-wrap items-center gap-4">
                 <motion.a 
@@ -78,7 +96,7 @@ export default function Hero() {
               {/* Card Label / Label "Sticker" */}
               <div className="absolute -bottom-6 -left-6 bg-primary text-white py-4 px-8 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500">
                 <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.4em] block mb-1">Jacob Hull</span>
-                <span className="text-[8px] md:text-[9px] font-medium uppercase tracking-[0.2em] opacity-80 block">Riot Games · Producer II</span>
+                <span className="text-[10px] font-medium uppercase tracking-[0.2em] opacity-90 block">Riot Games · Producer II</span>
               </div>
 
               {/* Riot Brand Seal - Separate "Stamp" */}

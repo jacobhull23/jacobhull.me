@@ -17,6 +17,8 @@ export interface Project {
   title: string;
   role: string;
   focusArea?: string;
+  /** One public, verifiable result line, shown prominently on the banner. */
+  outcome?: string;
   year: string;
   description: string;
   tags: string[];
@@ -33,6 +35,16 @@ export interface Project {
   websiteUrl?: string;
   criticScore?: number;
   criticUrl?: string;
+  /** Shown as a smaller card in the "More projects" row instead of a full-screen banner. */
+  compact?: boolean;
+}
+
+export interface Capability {
+  id: string;
+  title: string;
+  description: string;
+  /** Where this was done, shown as small print under the description. */
+  evidence: string;
 }
 
 export interface Writing {

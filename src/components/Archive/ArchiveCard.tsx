@@ -32,11 +32,11 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({ article, index }) => {
       )}
       <div className="flex-grow pr-8 relative z-10">
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-[9px] font-mono uppercase tracking-widest text-primary font-bold">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-primary font-bold">
             {article.category}
           </span>
           <span className="h-px w-4 bg-[#151927]/10" />
-          <span className="text-[9px] font-mono uppercase tracking-widest opacity-40">
+          <span className="text-[10px] font-mono uppercase tracking-widest opacity-70">
             {article.publication}
           </span>
         </div>
@@ -45,7 +45,7 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({ article, index }) => {
         </h3>
       </div>
       <div className="mt-4 md:mt-0 flex items-center justify-between md:justify-end gap-6 relative z-10">
-        <span className="text-[10px] font-mono uppercase tracking-widest opacity-40">
+        <span className="text-[11px] font-mono uppercase tracking-widest opacity-70">
           {article.date}
         </span>
         <div className="h-10 w-10 rounded-full border border-[#151927]/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-300">

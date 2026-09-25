@@ -4,9 +4,9 @@ import ExperienceItem from './ExperienceItem';
 
 export default function ExperienceList() {
   return (
-    <section id="experience" className="py-32 bg-background border-y">
+    <section id="experience" className="py-24 md:py-32 bg-background border-y">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20">
           <div>
             <div className="sticky top-32">
               <div className="flex items-center gap-4 mb-4">
@@ -20,7 +20,7 @@ export default function ExperienceList() {
             </div>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-2">
             {EXPERIENCES.map((exp) => (
               <ExperienceItem key={exp.id} exp={exp} />
             ))}

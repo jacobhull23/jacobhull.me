@@ -69,13 +69,13 @@ export default function ArticleLayout({
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-xl md:text-2xl font-medium text-[#151927]/60 italic leading-tight border-l-4 border-primary pl-6 py-2">
+                <p className="text-xl md:text-2xl font-medium text-[#151927]/75 italic leading-tight border-l-4 border-primary pl-6 py-2">
                   {subtitle}
                 </p>
               )}
             </div>
 
-            <div className="flex flex-wrap items-center gap-8 py-8 border-y border-[#151927]/10 mb-12 text-[10px] font-mono uppercase tracking-widest opacity-60">
+            <div className="flex flex-wrap items-center gap-8 py-8 border-y border-[#151927]/10 mb-12 text-[11px] font-mono uppercase tracking-widest opacity-75">
               <div className="flex items-center gap-2">
                 <User className="h-3 w-3" />
                 <span>By {author}</span>

@@ -28,7 +28,7 @@ const FeaturedArchiveCard: React.FC<FeaturedArchiveCardProps> = ({ article, inde
       )}
       <div className="relative z-10 flex flex-col h-full p-8">
         <div className="mb-auto">
-          <span className="px-2 py-1 bg-primary text-white text-[8px] font-bold uppercase tracking-[0.2em]">
+          <span className="px-2 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em]">
             {article.category}
           </span>
         </div>

@@ -50,7 +50,7 @@ const WritingCard: React.FC<WritingCardProps> = ({ writing }) => {
               />
             </div>
           ) : (
-            <span className="text-[10px] font-mono uppercase tracking-widest opacity-40">
+            <span className="text-[11px] font-mono uppercase tracking-widest opacity-70">
               {writing.publication}
             </span>
           )}

@@ -21,10 +21,10 @@ export default function ContactForm({ formStatus, onSubmit }: ContactFormProps) 
           <div className="text-left">
             <h2 className="text-xs font-bold uppercase tracking-[0.5em] text-primary mb-8">Get In Touch</h2>
             <h3 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-8 leading-[0.85]">
-              Let's build the <br />next big <span className="text-primary underline decoration-4 underline-offset-8">experience</span>.
+              Let's build <br />what's <span className="text-primary underline decoration-4 underline-offset-8">next</span>.
             </h3>
             <p className="text-secondary-foreground/60 text-lg mb-12 max-w-md">
-              Have a project in mind? Looking for product leadership? Drop me a message and let's talk.
+              Hiring for a product manager or producer role, in games or tech? Send me a message or connect on LinkedIn.
             </p>
             <div className="flex items-center gap-6">
               <motion.a 
@@ -80,7 +80,7 @@ export default function ContactForm({ formStatus, onSubmit }: ContactFormProps) 
                   id="message" 
                   name="message"
                   required
-                  placeholder="Tell me about your project..." 
+                  placeholder="Tell me about the role or opportunity..." 
                   className="rounded-none bg-[#ece5de] border-white/20 focus:border-primary min-h-[150px] text-sm text-[#151927] placeholder:text-[#151927]/40 font-sans resize-none"
                 />
               </div>
