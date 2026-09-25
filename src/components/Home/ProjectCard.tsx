@@ -164,6 +164,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
             </div>
           </div>
 
+          {project.outcome && (
+            <div className="border-l-4 border-primary pl-4 md:pl-6 py-1 mb-6 max-w-2xl">
+              <div className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] text-white/70 mb-2">Outcome</div>
+              <p className="text-white font-display font-bold text-lg md:text-2xl leading-snug tracking-tight">{project.outcome}</p>
+            </div>
+          )}
+
           <p className="text-white/80 md:text-white/90 leading-relaxed text-sm md:text-lg font-medium mb-8 max-w-2xl">
             {project.description}
           </p>

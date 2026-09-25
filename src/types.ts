@@ -17,6 +17,8 @@ export interface Project {
   title: string;
   role: string;
   focusArea?: string;
+  /** One public, verifiable result line, shown prominently on the banner. */
+  outcome?: string;
   year: string;
   description: string;
   tags: string[];

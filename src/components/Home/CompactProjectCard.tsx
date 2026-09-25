@@ -65,6 +65,12 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({ project }) => {
         <div className="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4">
           {project.role} {project.focusArea && <span className="opacity-60 font-medium">· {project.focusArea}</span>}
         </div>
+        {project.outcome && (
+          <div className="border-l-4 border-primary pl-4 py-1 mb-4 max-w-xl">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-1">Outcome</div>
+            <p className="text-white font-display font-bold text-lg leading-snug tracking-tight">{project.outcome}</p>
+          </div>
+        )}
         <p className="text-white/80 md:text-white/90 leading-relaxed text-sm md:text-base font-medium max-w-xl">
           {project.description}
         </p>
