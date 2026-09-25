@@ -48,7 +48,7 @@ export default function ContactForm({ formStatus, onSubmit }: ContactFormProps) 
               className="space-y-6"
             >
               {/* Optional: Configuration fields */}
-              <input type="hidden" name="_next" value={window.location.href} />
+              <input type="hidden" name="_next" value="https://jacobhull.me/" />
               <input type="hidden" name="_subject" value="New Portfolio Message" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
