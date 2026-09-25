@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
   
   return (
     <motion.div 
-      className="group relative min-h-[60vh] md:min-h-screen w-full flex items-center justify-center overflow-hidden border-b border-white/5"
+      className="group relative min-h-[60vh] md:min-h-[75vh] w-full flex items-center justify-center overflow-hidden border-b border-white/5"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center py-16 md:py-32">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center py-16 md:py-20">
         <div className="max-w-3xl relative">
           {/* Tags */}
           <div className="flex items-center justify-between mb-8 md:mb-12">
