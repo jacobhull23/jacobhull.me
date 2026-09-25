@@ -190,7 +190,7 @@ export const PROJECTS: Project[] = [
     id: 'p6',
     title: 'Timeline Platform',
     role: 'Product Manager',
-    year: '2017–2020 · In Development',
+    year: '2017–2020 · Shipped',
     description: 'Defined product direction and led development of a data visualization platform from concept through delivery. Worked closely with engineers to shape core features, user experience, and scalable product foundations.',
     tags: ['KPV LAB', 'Data Vis', 'Platform'],
     imageUrl: '/images/projects/timeline-platform.webp',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Download } from 'lucide-react';
-import { handleDownloadCV } from '../../lib/download';
 
 export default function Hero() {
   return (
@@ -37,7 +36,6 @@ export default function Hero() {
                 <motion.a 
                   href="/Jacob_Hull_CV.pdf" 
                   download="Jacob_Hull_CV.pdf"
-                  onClick={handleDownloadCV}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex items-center justify-center h-12 px-6 bg-primary text-white text-xs font-bold uppercase tracking-[0.2em] shadow-lg hover:bg-foreground hover:text-background transition-all duration-300 group/cv cursor-pointer"
@@ -80,7 +78,7 @@ export default function Hero() {
               {/* Card Label / Label "Sticker" */}
               <div className="absolute -bottom-6 -left-6 bg-primary text-white py-4 px-8 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500">
                 <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.4em] block mb-1">Jacob Hull</span>
-                <span className="text-[8px] md:text-[9px] font-medium uppercase tracking-[0.2em] opacity-80 block">Riot Games · Senior Producer</span>
+                <span className="text-[8px] md:text-[9px] font-medium uppercase tracking-[0.2em] opacity-80 block">Riot Games · Producer II</span>
               </div>
 
               {/* Riot Brand Seal - Separate "Stamp" */}
