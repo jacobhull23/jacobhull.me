@@ -30,6 +30,7 @@ export default function ContactForm({ formStatus, onSubmit }: ContactFormProps) 
               <motion.a 
                 href="https://www.linkedin.com/in/jacobhull" 
                 target="_blank" 
+                aria-label="Jacob Hull on LinkedIn"
                 rel="noopener noreferrer" 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}

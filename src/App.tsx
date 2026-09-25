@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Home';
 import Archive from './Archive';
 import ShadowWarrior2Article from './ShadowWarrior2Article';
+import { PAGE_META } from './seo';
 
 export default function App() {
   const location = useLocation();
@@ -10,6 +11,8 @@ export default function App() {
   // Scroll to top on route change
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    const meta = PAGE_META[location.pathname];
+    if (meta) document.title = meta.title;
   }, [location.pathname]);
 
   return (

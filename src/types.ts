@@ -21,6 +21,7 @@ export interface Project {
   description: string;
   tags: string[];
   imageUrl: string;
+  studio?: string;
   studioLogoUrl?: string;
   gameLogoUrl?: string;
   color?: string;

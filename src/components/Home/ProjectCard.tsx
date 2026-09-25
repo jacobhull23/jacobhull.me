@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
             loading="lazy"
             decoding="async"
             src={project.studioLogoUrl} 
-            alt="Studio Logo" 
+            alt={project.studio ? `${project.studio} logo` : ''} 
             className={cn(
               "h-6 md:h-12 w-auto object-contain transition-all duration-500",
               project.studioLogoUrl.includes('/logos/kpv-lab') 
@@ -115,6 +115,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
           <div className="mb-8 min-h-[100px] md:min-h-[140px] flex flex-col justify-center">
             {project.gameLogoUrl ? (
               <div className="h-24 md:h-40 flex items-center">
+                <h2 className="sr-only">{project.title}</h2>
                 {project.useColorForLogo ? (
                   <div 
                     style={{ 
@@ -131,13 +132,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                       transformOrigin: 'left center'
                     } as React.CSSProperties}
                     className="h-full w-full max-w-full md:max-w-[700px]"
+                    aria-hidden="true"
                   />
                 ) : (
                   <img 
                     loading="lazy"
                     decoding="async"
                     src={project.gameLogoUrl} 
-                    alt={`${project.title} logo`} 
+                    alt="" 
                     style={{ transform: `scale(${project.logoScale || 1})` }}
                     className={cn(
                       "h-full w-auto max-w-full md:max-w-[550px] object-contain object-left origin-left drop-shadow-2xl",
