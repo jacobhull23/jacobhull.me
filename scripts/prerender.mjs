@@ -8,7 +8,19 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const { render, renderHead, routes } = await import(path.join(root, 'dist-ssr/entry-server.js'));
 
-const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8');
+// Preload the fonts used above the fold so headings don't reflow (CLS) when
+// the webfont swaps in over the fallback.
+const preloadFonts = ['space-grotesk-latin', 'inter-latin'];
+const assets = fs.readdirSync(path.join(dist, 'assets'));
+const preloads = preloadFonts.map((name) => {
+  const file = assets.find((f) => new RegExp(`^${name}-[\\w-]{8}\\.woff2$`).test(f));
+  if (!file) throw new Error(`prerender: no built font file for ${name}`);
+  return `<link rel="preload" href="/assets/${file}" as="font" type="font/woff2" crossorigin />`;
+});
+
+const template = fs
+  .readFileSync(path.join(dist, 'index.html'), 'utf-8')
+  .replace('</head>', `  ${preloads.join('\n    ')}\n  </head>`);
 
 for (const url of routes) {
   const html = template
