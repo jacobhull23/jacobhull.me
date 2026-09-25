@@ -32,11 +32,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
         <div className="absolute top-6 md:top-12 right-6 md:right-12 z-20 flex flex-col items-center gap-1 md:gap-2">
           <span className="text-[7px] md:text-[8px] font-bold uppercase tracking-[0.3em] text-white/40 md:group-hover:text-white/60 transition-colors">Produced At</span>
           <img 
+            loading="lazy"
+            decoding="async"
             src={project.studioLogoUrl} 
             alt="Studio Logo" 
             className={cn(
               "h-6 md:h-12 w-auto object-contain transition-all duration-500",
-              project.studioLogoUrl.includes('lh3.googleusercontent.com') 
+              project.studioLogoUrl.includes('/logos/kpv-lab') 
                 ? "mix-blend-multiply opacity-30 md:group-hover:opacity-100" 
                 : "grayscale brightness-200 opacity-40 md:group-hover:opacity-100"
             )}
@@ -47,9 +49,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[2s] ease-out scale-110 group-hover:scale-100 grayscale hover:grayscale-0"
-          style={{ backgroundImage: `url(${project.imageUrl})` }}
+        <img 
+          src={project.imageUrl}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[2s] ease-out scale-110 group-hover:scale-100 grayscale hover:grayscale-0"
         />
         {/* Color Overlay */}
         <div 
@@ -129,6 +134,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                   />
                 ) : (
                   <img 
+                    loading="lazy"
+                    decoding="async"
                     src={project.gameLogoUrl} 
                     alt={`${project.title} logo`} 
                     style={{ transform: `scale(${project.logoScale || 1})` }}

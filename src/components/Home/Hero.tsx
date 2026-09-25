@@ -68,13 +68,13 @@ export default function Hero() {
             <div className="relative aspect-[3/4] bg-[#f8f6f3] p-4 md:p-6 shadow-[30px_30px_80px_rgba(0,0,0,0.1)] border border-black/10 transition-transform duration-500 hover:rotate-0 group">
               <div className="relative w-full h-full overflow-hidden bg-white transition-all duration-700 ease-out border border-black/5 group">
                 <img 
-                  src="https://lh3.googleusercontent.com/d/1NqfX8am0cHX1mfhN0Tbc4wbdiXMXumrH" 
+                  src="/images/jacob-hull.webp" 
                   alt="Jacob Hull" 
                   className="w-full h-full object-cover origin-bottom scale-105 group-hover:scale-100 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
                 />
                 {/* Subtle texture overlay for editorial feel */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]" />
+                <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('/images/textures/paper-fibers.webp')]" />
               </div>
               
               {/* Card Label / Label "Sticker" */}
@@ -91,7 +91,7 @@ export default function Hero() {
                 className="absolute -top-6 -right-6 w-14 h-14 bg-white rounded-full shadow-[10px_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-center p-0.5 border border-black/5 z-20 hover:scale-110 transition-transform duration-300 pointer-events-auto"
               >
                 <img 
-                  src="https://img.icons8.com/color/512/riot-games.png" 
+                  src="/images/logos/riot-games.webp" 
                   alt="Riot Games" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

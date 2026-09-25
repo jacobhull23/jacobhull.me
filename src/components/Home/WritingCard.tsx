@@ -18,6 +18,8 @@ const WritingCard: React.FC<WritingCardProps> = ({ writing }) => {
       {writing.image && (
         <div className="absolute inset-0 z-0 overflow-hidden opacity-10 group-hover:opacity-30 transition-opacity duration-500">
           <img 
+            loading="lazy"
+            decoding="async"
             src={writing.image} 
             alt="" 
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
@@ -39,6 +41,8 @@ const WritingCard: React.FC<WritingCardProps> = ({ writing }) => {
           {writing.publicationLogo ? (
             <div className="h-5 flex items-center">
               <img 
+                loading="lazy"
+                decoding="async"
                 src={writing.publicationLogo} 
                 alt={writing.publication} 
                 className="h-full w-auto object-contain opacity-40 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"

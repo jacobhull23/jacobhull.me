@@ -9,7 +9,7 @@ export default function ShadowWarrior2Article() {
       publication="Official PlayStation Magazine UK"
       date="Issue 124, July 2016"
       author="Jacob Hull"
-      headerImage="https://images.gog-statics.com/dd878390cb16f2cac44bdf79cfbbfe28b26239ae0524bfaf45dba3686e124ef4.jpg"
+      headerImage="/images/articles/shadow-warrior-2-header.webp"
     >
       <p>
         Following the exploits of Lo Wang five years after the events of his reboot, Flying Wild Hog’s ludicrous but enjoyable ninja extravaganza returns for a second round of relentless slaying and punning. This time, it also includes a new four-player online co-op mode, important tweaks to the established formula, and a typically fast-paced weapons-first approach. 
@@ -20,7 +20,9 @@ export default function ShadowWarrior2Article() {
       </p>
 
       <img 
-        src="https://gameranx.com/wp-content/uploads/2016/10/SW2-2.png" 
+        loading="lazy"
+        decoding="async"
+        src="/images/articles/shadow-warrior-2-gameplay.webp" 
         alt="Shadow Warrior 2 Gameplay" 
         referrerPolicy="no-referrer"
       />
@@ -33,11 +35,6 @@ export default function ShadowWarrior2Article() {
         Thankfully it provides plenty of variation in this regard. Weapons take center stage as you quickly switch between a medley of different types: shotguns, pistols, and automatics – some of which can be dual-wielded – fill out the basic categories, while otherworldly weapons like an electrocuted grenade launcher and a green machine gun that looks like something straight out of a 70s sci-fi movie provide some variation. Swords can also be used, including some Wolverine-like fist blades that allow you to dance like a ballerina while painting a canvas of blood, almost like you’re finishing in the arabesque position.
       </p>
 
-      <img 
-        src="https://m.media-amazon.com/images/M/MV5BZTkyOGYxMTctYWY4Yy00Mzg0LWE5YWYtOGI4OWExM2QyMDdhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjA5MDY0Mw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg" 
-        alt="Lo Wang in Action" 
-        referrerPolicy="no-referrer"
-      />
 
       <h3>Wang of Four</h3>
 
@@ -50,7 +47,9 @@ export default function ShadowWarrior2Article() {
       </p>
 
       <img 
-        src="https://steamcdn-a.akamaihd.net/steam/apps/592461/ss_ba8fe7008aefab6957f3c64bdcfbecfa4329e040.1920x1080.jpg?t=1503420758" 
+        loading="lazy"
+        decoding="async"
+        src="/images/articles/shadow-warrior-2-coop.webp" 
         alt="Co-op Gameplay" 
         referrerPolicy="no-referrer"
       />
