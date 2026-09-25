@@ -23,7 +23,7 @@ export default function Hero() {
             className="flex-1 lg:max-w-[60%]"
           >
             <h1 className="font-display text-6xl md:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter uppercase mb-10 translate-x-[-0.05em]">
-              Senior Producer & <br />
+              Game Producer & <br />
               <span className="text-primary">Product Manager</span>
             </h1>
             <div className="flex flex-col gap-8">
