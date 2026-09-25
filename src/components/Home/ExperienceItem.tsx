@@ -66,7 +66,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
           {exp.period}
         </motion.div>
       </div>
-      <p className="text-foreground/60 mb-6 max-w-2xl font-medium">
+      <p className="text-foreground/75 mb-6 max-w-2xl font-medium">
         {exp.description}
       </p>
       <div className="grid grid-cols-1 gap-y-3">

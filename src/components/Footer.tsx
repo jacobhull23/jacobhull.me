@@ -14,13 +14,13 @@ export default function Footer() {
             Jacob Hull
           </Link>
         </motion.div>
-        <div className="flex flex-wrap justify-center gap-12 text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">
+        <div className="flex flex-wrap justify-center gap-12 text-[11px] font-bold uppercase tracking-[0.3em] opacity-70">
           <a href="/#projects" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Projects</a>
           <a href="/#experience" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Studio History</a>
           <a href="/#writing" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Publications</a>
           <a href="/#contact" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Contact</a>
         </div>
-        <div className="text-[10px] font-mono uppercase tracking-widest opacity-30" suppressHydrationWarning>
+        <div className="text-[11px] font-mono uppercase tracking-widest opacity-75" suppressHydrationWarning>
           © {new Date().getFullYear()} Jacob Hull.
         </div>
       </div>

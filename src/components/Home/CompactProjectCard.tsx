@@ -22,7 +22,7 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({ project }) => {
     >
       {project.studioLogoUrl && (
         <div className="absolute top-6 md:top-10 right-6 md:right-10 z-20 flex flex-col items-center gap-1 md:gap-2">
-          <span className="text-[7px] md:text-[8px] font-bold uppercase tracking-[0.3em] text-white/40 md:group-hover:text-white/60 transition-colors">Produced At</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 md:group-hover:text-white/90 transition-colors">Produced At</span>
           <img
             loading="lazy"
             decoding="async"

@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
       {/* Brand Stamp */}
       {project.studioLogoUrl && (
         <div className="absolute top-6 md:top-12 right-6 md:right-12 z-20 flex flex-col items-center gap-1 md:gap-2">
-          <span className="text-[7px] md:text-[8px] font-bold uppercase tracking-[0.3em] text-white/40 md:group-hover:text-white/60 transition-colors">Produced At</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 md:group-hover:text-white/90 transition-colors">Produced At</span>
           <img 
             loading="lazy"
             decoding="async"
@@ -90,7 +90,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                   >
                     <div className="flex items-center gap-2">
                       <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                      <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/70 group-hover/score:text-white transition-colors leading-none">OpenCritic</span>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/80 group-hover/score:text-white transition-colors leading-none">OpenCritic</span>
                     </div>
                     <div className="h-3 w-px bg-white/20" />
                     <span className="text-sm font-display font-bold text-white leading-none">{project.criticScore}</span>
@@ -101,7 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                 {project.platforms?.map((platform) => (
                   <span 
                     key={platform}
-                    className="flex items-center justify-center h-8 px-4 bg-white/5 backdrop-blur-sm border border-white/10 text-[9px] font-bold uppercase tracking-[0.2em] text-white/80 gap-2 leading-none"
+                    className="flex items-center justify-center h-8 px-4 bg-white/5 backdrop-blur-sm border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-white/90 gap-2 leading-none"
                   >
                     {getPlatformIcon(platform)}
                     {platform}
