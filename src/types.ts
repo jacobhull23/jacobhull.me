@@ -37,6 +37,14 @@ export interface Project {
   compact?: boolean;
 }
 
+export interface Capability {
+  id: string;
+  title: string;
+  description: string;
+  /** Where this was done, shown as small print under the description. */
+  evidence: string;
+}
+
 export interface Writing {
   id: string;
   title: string;

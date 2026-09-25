@@ -15,6 +15,7 @@ export default function Navbar() {
           Jacob Hull
         </motion.a>
         <div className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-[0.2em]">
+          <a href="#approach" className="hover:text-primary transition-colors cursor-pointer">Approach</a>
           <a href="#projects" className="hover:text-primary transition-colors cursor-pointer">Projects</a>
           <a href="#experience" className="hover:text-primary transition-colors cursor-pointer">Experience</a>
           <a href="#writing" className="hover:text-primary transition-colors cursor-pointer">Writing</a>

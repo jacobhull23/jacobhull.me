@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Hero from './components/Home/Hero';
+import ProductProduction from './components/Home/ProductProduction';
 import ProjectsList from './components/Home/ProjectsList';
 import ExperienceList from './components/Home/ExperienceList';
 import WritingList from './components/Home/WritingList';
@@ -33,6 +34,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <ProductProduction />
         <ProjectsList onWatchPreview={(url) => setActiveVideo(url)} />
         <ExperienceList />
         <WritingList />

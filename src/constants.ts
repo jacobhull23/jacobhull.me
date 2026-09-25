@@ -1,4 +1,4 @@
-import { Experience, Project, Writing } from './types';
+import { Capability, Experience, Project, Writing } from './types';
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -69,6 +69,35 @@ export const EXPERIENCES: Experience[] = [
       text: 'View Full Article Portfolio',
       url: '/archive'
     }
+  }
+];
+
+// How game production work maps onto product management. Every claim here
+// is backed by an EXPERIENCES entry above; keep the two in sync.
+export const CAPABILITIES: Capability[] = [
+  {
+    id: 'direction',
+    title: 'Product Direction & Vision',
+    description: 'Shaping what gets built and why. Defined product vision and core user experience as a PM, and helped shape product direction from inception on a new isometric RPG.',
+    evidence: 'KPV LAB · ZA/UM'
+  },
+  {
+    id: 'roadmaps',
+    title: 'Roadmaps & Prioritization',
+    description: 'Balancing player motivation, engagement, and monetization, and partnering with leadership on scope, planning, and resource trade-offs.',
+    evidence: 'Riot Games · ZA/UM'
+  },
+  {
+    id: 'operating-models',
+    title: 'Teams & Operating Models',
+    description: 'Moved a ~70-developer studio from waterfall to cross-functional Agile feature teams, improving predictability and shortening roadmap timelines. Coached 4 producers.',
+    evidence: 'ZA/UM'
+  },
+  {
+    id: 'live-products',
+    title: 'Live Products & Player Systems',
+    description: 'Personalization, social, and Trust & Safety systems for a global player base, from Closed Beta through launch and live operations, with engineering, legal, and compliance.',
+    evidence: 'Riot Games · VALORANT · 2XKO'
   }
 ];
 
