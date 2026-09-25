@@ -32,11 +32,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
         <div className="absolute top-6 md:top-12 right-6 md:right-12 z-20 flex flex-col items-center gap-1 md:gap-2">
           <span className="text-[7px] md:text-[8px] font-bold uppercase tracking-[0.3em] text-white/40 md:group-hover:text-white/60 transition-colors">Produced At</span>
           <img 
+            loading="lazy"
+            decoding="async"
             src={project.studioLogoUrl} 
-            alt="Studio Logo" 
+            alt={project.studio ? `${project.studio} logo` : ''} 
             className={cn(
               "h-6 md:h-12 w-auto object-contain transition-all duration-500",
-              project.studioLogoUrl.includes('lh3.googleusercontent.com') 
+              project.studioLogoUrl.includes('/logos/kpv-lab') 
                 ? "mix-blend-multiply opacity-30 md:group-hover:opacity-100" 
                 : "grayscale brightness-200 opacity-40 md:group-hover:opacity-100"
             )}
@@ -47,9 +49,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[2s] ease-out scale-110 group-hover:scale-100 grayscale hover:grayscale-0"
-          style={{ backgroundImage: `url(${project.imageUrl})` }}
+        <img 
+          src={project.imageUrl}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[2s] ease-out scale-110 group-hover:scale-100 grayscale hover:grayscale-0"
         />
         {/* Color Overlay */}
         <div 
@@ -110,6 +115,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
           <div className="mb-8 min-h-[100px] md:min-h-[140px] flex flex-col justify-center">
             {project.gameLogoUrl ? (
               <div className="h-24 md:h-40 flex items-center">
+                <h2 className="sr-only">{project.title}</h2>
                 {project.useColorForLogo ? (
                   <div 
                     style={{ 
@@ -126,11 +132,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                       transformOrigin: 'left center'
                     } as React.CSSProperties}
                     className="h-full w-full max-w-full md:max-w-[700px]"
+                    aria-hidden="true"
                   />
                 ) : (
                   <img 
+                    loading="lazy"
+                    decoding="async"
                     src={project.gameLogoUrl} 
-                    alt={`${project.title} logo`} 
+                    alt="" 
                     style={{ transform: `scale(${project.logoScale || 1})` }}
                     className={cn(
                       "h-full w-auto max-w-full md:max-w-[550px] object-contain object-left origin-left drop-shadow-2xl",

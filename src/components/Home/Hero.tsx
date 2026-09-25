@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Download } from 'lucide-react';
-import { handleDownloadCV } from '../../lib/download';
 
 export default function Hero() {
   return (
@@ -24,7 +23,7 @@ export default function Hero() {
             className="flex-1 lg:max-w-[60%]"
           >
             <h1 className="font-display text-6xl md:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter uppercase mb-10 translate-x-[-0.05em]">
-              Senior Producer & <br />
+              Game Producer & <br />
               <span className="text-primary">Product Manager</span>
             </h1>
             <div className="flex flex-col gap-8">
@@ -37,7 +36,6 @@ export default function Hero() {
                 <motion.a 
                   href="/Jacob_Hull_CV.pdf" 
                   download="Jacob_Hull_CV.pdf"
-                  onClick={handleDownloadCV}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex items-center justify-center h-12 px-6 bg-primary text-white text-xs font-bold uppercase tracking-[0.2em] shadow-lg hover:bg-foreground hover:text-background transition-all duration-300 group/cv cursor-pointer"
@@ -68,19 +66,19 @@ export default function Hero() {
             <div className="relative aspect-[3/4] bg-[#f8f6f3] p-4 md:p-6 shadow-[30px_30px_80px_rgba(0,0,0,0.1)] border border-black/10 transition-transform duration-500 hover:rotate-0 group">
               <div className="relative w-full h-full overflow-hidden bg-white transition-all duration-700 ease-out border border-black/5 group">
                 <img 
-                  src="https://lh3.googleusercontent.com/d/1NqfX8am0cHX1mfhN0Tbc4wbdiXMXumrH" 
+                  src="/images/jacob-hull.webp" 
                   alt="Jacob Hull" 
                   className="w-full h-full object-cover origin-bottom scale-105 group-hover:scale-100 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
                 />
                 {/* Subtle texture overlay for editorial feel */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]" />
+                <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('/images/textures/paper-fibers.webp')]" />
               </div>
               
               {/* Card Label / Label "Sticker" */}
               <div className="absolute -bottom-6 -left-6 bg-primary text-white py-4 px-8 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500">
                 <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.4em] block mb-1">Jacob Hull</span>
-                <span className="text-[8px] md:text-[9px] font-medium uppercase tracking-[0.2em] opacity-80 block">Riot Games · Senior Producer</span>
+                <span className="text-[8px] md:text-[9px] font-medium uppercase tracking-[0.2em] opacity-80 block">Riot Games · Producer II</span>
               </div>
 
               {/* Riot Brand Seal - Separate "Stamp" */}
@@ -91,7 +89,7 @@ export default function Hero() {
                 className="absolute -top-6 -right-6 w-14 h-14 bg-white rounded-full shadow-[10px_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-center p-0.5 border border-black/5 z-20 hover:scale-110 transition-transform duration-300 pointer-events-auto"
               >
                 <img 
-                  src="https://img.icons8.com/color/512/riot-games.png" 
+                  src="/images/logos/riot-games.webp" 
                   alt="Riot Games" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

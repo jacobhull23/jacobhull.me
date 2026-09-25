@@ -19,6 +19,8 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({ article, index }) => {
       {article.image && (
         <div className="absolute left-0 top-0 h-full w-full overflow-hidden pointer-events-none z-0">
           <img 
+            loading="lazy"
+            decoding="async"
             src={article.image} 
             alt="" 
             className="w-full h-full object-cover opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-40 transition-all duration-700"

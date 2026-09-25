@@ -39,6 +39,8 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
               exp.company === 'Riot Games' && "rounded-full"
             )}>
               <img 
+                loading="lazy"
+                decoding="async"
                 src={exp.logoUrl} 
                 alt={`${exp.company} logo`}
                 className={cn(

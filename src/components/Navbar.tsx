@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
-import { handleDownloadCV } from '../lib/download';
 
 export default function Navbar() {
   return (
@@ -22,7 +21,7 @@ export default function Navbar() {
           <a href="#contact" className="hover:text-primary transition-colors cursor-pointer">Contact</a>
         </div>
         <div className="flex items-center gap-3">
-          <a href="/Jacob_Hull_CV.pdf" download="Jacob_Hull_CV.pdf" onClick={handleDownloadCV} className="cursor-pointer">
+          <a href="/Jacob_Hull_CV.pdf" download="Jacob_Hull_CV.pdf" className="cursor-pointer">
             <Button variant="outline" size="sm" className="rounded-none border-primary/30 text-foreground hover:border-primary hover:bg-primary/5 px-4 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 cursor-pointer">
               Download CV
             </Button>

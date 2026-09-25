@@ -36,7 +36,7 @@ export default function ArticleLayout({
           <div className="font-display text-sm font-bold tracking-tighter hidden md:block">
             {publication} · {date}
           </div>
-          <Button variant="ghost" size="icon" className="rounded-full cursor-pointer">
+          <Button variant="ghost" size="icon" className="rounded-full cursor-pointer" aria-label="Share">
             <Share2 className="h-4 w-4" />
           </Button>
         </div>

@@ -30,6 +30,7 @@ export default function ContactForm({ formStatus, onSubmit }: ContactFormProps) 
               <motion.a 
                 href="https://www.linkedin.com/in/jacobhull" 
                 target="_blank" 
+                aria-label="Jacob Hull on LinkedIn"
                 rel="noopener noreferrer" 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -48,7 +49,7 @@ export default function ContactForm({ formStatus, onSubmit }: ContactFormProps) 
               className="space-y-6"
             >
               {/* Optional: Configuration fields */}
-              <input type="hidden" name="_next" value={window.location.href} />
+              <input type="hidden" name="_next" value="https://jacobhull.me/" />
               <input type="hidden" name="_subject" value="New Portfolio Message" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
