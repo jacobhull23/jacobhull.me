@@ -33,6 +33,8 @@ export interface Project {
   websiteUrl?: string;
   criticScore?: number;
   criticUrl?: string;
+  /** Shown as a smaller card in the "More projects" row instead of a full-screen banner. */
+  compact?: boolean;
 }
 
 export interface Writing {

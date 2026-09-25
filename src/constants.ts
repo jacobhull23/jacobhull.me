@@ -184,7 +184,8 @@ export const PROJECTS: Project[] = [
     imageUrl: '/images/projects/lego-unannounced.webp',
     studio: 'Traveller\'s Tales',
     studioLogoUrl: '/images/logos/travellers-tales.webp',
-    color: '#ffd500'
+    color: '#ffd500',
+    compact: true
   },
   {
     id: 'p6',
@@ -196,7 +197,8 @@ export const PROJECTS: Project[] = [
     imageUrl: '/images/projects/timeline-platform.webp',
     studio: 'KPV LAB',
     studioLogoUrl: '/images/logos/kpv-lab.webp',
-    color: '#0ea5e9'
+    color: '#0ea5e9',
+    compact: true
   }
 ];
 

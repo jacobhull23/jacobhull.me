@@ -32,7 +32,7 @@ export default function Hero() {
             </h1>
             <div className="flex flex-col gap-8">
               <p className="text-xl md:text-2xl font-medium max-w-2xl leading-snug">
-                Product-minded producer with 9 years across AAA games and software. I set product direction, prioritize roadmaps, and lead cross-functional teams from concept through launch and live operations.
+                Product-minded producer with 10 years across AAA games and software. I set product direction, prioritize roadmaps, and lead cross-functional teams from concept through launch and live operations.
               </p>
               {/* Credits strip: the recognizable titles, visible in the first screen */}
               <div className="flex flex-col gap-3">

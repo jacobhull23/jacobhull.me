@@ -2,6 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { PROJECTS } from '../../constants';
 import ProjectCard from './ProjectCard';
+import CompactProjectCard from './CompactProjectCard';
+
+const featuredProjects = PROJECTS.filter((p) => !p.compact);
+const compactProjects = PROJECTS.filter((p) => p.compact);
 
 const staggerContainer = {
   animate: {
@@ -25,7 +29,7 @@ export default function ProjectsList({ onWatchPreview }: ProjectsListProps) {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        {PROJECTS.map((project) => (
+        {featuredProjects.map((project) => (
           <ProjectCard 
             key={project.id} 
             project={project} 
@@ -33,6 +37,20 @@ export default function ProjectsList({ onWatchPreview }: ProjectsListProps) {
           />
         ))}
       </motion.div>
+
+      {compactProjects.length > 0 && (
+        <div>
+          <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-8 flex items-center gap-4">
+            <div className="h-px w-12 bg-primary" />
+            <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-primary">More Projects</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {compactProjects.map((project) => (
+              <CompactProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
