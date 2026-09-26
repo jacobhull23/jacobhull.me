@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const { render, renderHead, routes } = await import(path.join(root, 'dist-ssr/entry-server.js'));
+const { render, renderHead, routes, SITE_URL } = await import(path.join(root, 'dist-ssr/entry-server.js'));
 
 // Preload the fonts used above the fold so headings don't reflow (CLS) when
 // the webfont swaps in over the fallback.
@@ -32,5 +32,14 @@ for (const url of routes) {
   fs.writeFileSync(path.join(dist, file), html);
   console.log(`prerendered ${url} -> dist/${file}`);
 }
+
+// Sitemap is generated from the same route list, so new pages are included automatically.
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes.map((url) => `  <url><loc>${SITE_URL}${url}</loc></url>`).join('\n')}
+</urlset>
+`;
+fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap);
+console.log(`wrote dist/sitemap.xml (${routes.length} urls)`);
 
 fs.rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true });

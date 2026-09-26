@@ -23,6 +23,6 @@ Pushing to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
 
 1. Add the route in `src/App.tsx`.
 2. Add its title, description and share image to `PAGE_META` in `src/seo.ts`.
-3. Add the URL to `public/sitemap.xml`.
+   The page is then prerendered and added to `sitemap.xml` automatically.
 
 Images live in `public/images/` as WebP (max 1600px wide).
