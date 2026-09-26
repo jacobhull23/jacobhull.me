@@ -24,7 +24,6 @@ export default function ShadowWarrior2Article() {
         decoding="async"
         src="/images/articles/shadow-warrior-2-gameplay.webp" 
         alt="Shadow Warrior 2 Gameplay" 
-        referrerPolicy="no-referrer"
       />
       
       <p>
@@ -36,7 +35,7 @@ export default function ShadowWarrior2Article() {
       </p>
 
 
-      <h3>Wang of Four</h3>
+      <h2>Wang of Four</h2>
 
       <p>
         It’s about how you utilize each weapon, rather than sticking to one or two. Weapons level up separately which forces alteration, but different weapons provide plenty of encouragement for mixing-it-up anyway with each one proving useful in different situations. And let’s not forget that Wang is bringing some friends along for the ride. Each of these procedurally generated levels can also be played with three other friends in the new online co-operative mode which is bound to keep the anarchy reigning if you so desire.
@@ -51,7 +50,6 @@ export default function ShadowWarrior2Article() {
         decoding="async"
         src="/images/articles/shadow-warrior-2-coop.webp" 
         alt="Co-op Gameplay" 
-        referrerPolicy="no-referrer"
       />
 
       <p>

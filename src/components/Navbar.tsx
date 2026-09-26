@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 export default function Navbar() {
   return (
@@ -22,15 +23,21 @@ export default function Navbar() {
           <a href="#contact" className="hover:text-primary transition-colors cursor-pointer">Contact</a>
         </div>
         <div className="flex items-center gap-3">
-          <a href="/Jacob_Hull_CV.pdf" download="Jacob_Hull_CV.pdf" className="cursor-pointer">
-            <Button variant="outline" size="sm" className="rounded-none border-primary/30 text-foreground hover:border-primary hover:bg-primary/5 px-4 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 cursor-pointer">
-              Download CV
-            </Button>
+          {/* Links styled as buttons (not <button> inside <a>): one focus stop each. */}
+          <a
+            href="/Jacob_Hull_CV.pdf"
+            download="Jacob_Hull_CV.pdf"
+            className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), "rounded-none border-primary/30 text-foreground hover:border-primary hover:bg-primary/5 px-4 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 cursor-pointer")}
+          >
+            Download CV
           </a>
-          <a href="https://www.linkedin.com/in/jacobhull" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
-            <Button variant="default" size="sm" className="rounded-none bg-primary hover:bg-foreground hover:text-background px-4 md:px-6 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 cursor-pointer">
-              LinkedIn
-            </Button>
+          <a
+            href="https://www.linkedin.com/in/jacobhull"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(buttonVariants({ variant: 'default', size: 'sm' }), "rounded-none bg-primary hover:bg-foreground hover:text-background px-4 md:px-6 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 cursor-pointer")}
+          >
+            LinkedIn
           </a>
         </div>
       </div>

@@ -3,7 +3,10 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { Writing } from '../../types';
-import { cn } from '../../lib/utils';
+
+// Created once at module level; creating it inside the component would give
+// React a new component type on every render and remount the link.
+const MotionLink = motion.create(Link);
 
 interface ArchiveCardProps {
   article: Writing;
@@ -12,7 +15,6 @@ interface ArchiveCardProps {
 
 const ArchiveCard: React.FC<ArchiveCardProps> = ({ article, index }) => {
   const isInternal = article.link.startsWith('/');
-  const MotionLink = motion(Link);
   
   const content = (
     <>
@@ -24,7 +26,6 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({ article, index }) => {
             src={article.image} 
             alt="" 
             className="w-full h-full object-cover opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-40 transition-all duration-700"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ece5de]/40 to-[#ece5de] group-hover:to-[#f5f0eb] transition-colors duration-300" />
@@ -40,9 +41,9 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({ article, index }) => {
             {article.publication}
           </span>
         </div>
-        <h3 className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight group-hover:text-primary transition-colors">
+        <h2 className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight group-hover:text-primary transition-colors">
           {article.title}
-        </h3>
+        </h2>
       </div>
       <div className="mt-4 md:mt-0 flex items-center justify-between md:justify-end gap-6 relative z-10">
         <span className="text-[11px] font-mono uppercase tracking-widest opacity-70">

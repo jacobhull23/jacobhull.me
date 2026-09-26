@@ -33,10 +33,31 @@ export const PAGE_META: Record<string, PageMeta> = {
   },
 };
 
+export const NOT_FOUND_TITLE = 'Page not found | Jacob Hull';
+
+// Structured data for the home page so search engines can identify the person
+// behind the site (name, role, employer, profiles).
+const PERSON_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Jacob Hull',
+  url: `${SITE_URL}/`,
+  image: `${SITE_URL}/images/jacob-hull.webp`,
+  jobTitle: 'Producer II',
+  worksFor: { '@type': 'Organization', name: 'Riot Games', url: 'https://www.riotgames.com' },
+  description: PAGE_META['/'].description,
+  knowsAbout: ['Product management', 'Game production', 'Live service games', 'Agile delivery'],
+  sameAs: ['https://www.linkedin.com/in/jacobhull'],
+};
+
 const escape = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
 export function renderHead(path: string): string {
   const meta = PAGE_META[path];
+  if (!meta) {
+    // 404 page: titled, but kept out of search results.
+    return [`<title>${escape(NOT_FOUND_TITLE)}</title>`, `<meta name="robots" content="noindex" />`].join('\n    ');
+  }
   const url = SITE_URL + (path === '/' ? '/' : path);
   const image = SITE_URL + meta.image;
   return [
@@ -55,5 +76,6 @@ export function renderHead(path: string): string {
     `<meta name="twitter:title" content="${escape(meta.title)}" />`,
     `<meta name="twitter:description" content="${escape(meta.description)}" />`,
     `<meta name="twitter:image" content="${image}" />`,
+    ...(path === '/' ? [`<script type="application/ld+json">${JSON.stringify(PERSON_JSON_LD).replace(/</g, '\\u003c')}</script>`] : []),
   ].join('\n    ');
 }

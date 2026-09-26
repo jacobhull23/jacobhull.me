@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Play, Globe, Gamepad2, Monitor, Smartphone, Star } from 'lucide-react';
 import { Project } from '../../types';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
   project: Project;
@@ -42,7 +42,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                 ? "mix-blend-multiply opacity-30 md:group-hover:opacity-100" 
                 : "grayscale brightness-200 opacity-40 md:group-hover:opacity-100"
             )}
-            referrerPolicy="no-referrer"
           />
         </div>
       )}
@@ -145,7 +144,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                       "h-full w-auto max-w-full md:max-w-[550px] object-contain object-left origin-left drop-shadow-2xl",
                       project.invertLogo && "md:brightness-0 md:invert"
                     )}
-                    referrerPolicy="no-referrer"
                   />
                 )}
               </div>

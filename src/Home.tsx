@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Hero from './components/Home/Hero';
@@ -10,8 +10,8 @@ import ContactForm from './components/Home/ContactForm';
 import VideoModal from './components/Home/VideoModal';
 
 export default function Home() {
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const closeVideo = useCallback(() => setActiveVideo(null), []);
 
   // Lock body scroll when video is open
   useEffect(() => {
@@ -21,12 +21,6 @@ export default function Home() {
       document.body.style.overflow = 'auto';
     }
   }, [activeVideo]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    // We let the browser handle the form submission directly to FormSubmit
-    // because it's the most reliable method for static sites (GitHub Pages).
-    setFormStatus('submitting');
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-accent-foreground font-sans">
@@ -38,11 +32,11 @@ export default function Home() {
         <ProjectsList onWatchPreview={(url) => setActiveVideo(url)} />
         <ExperienceList />
         <WritingList />
-        <ContactForm formStatus={formStatus} onSubmit={handleSubmit} />
+        <ContactForm />
       </main>
 
       <Footer />
-      <VideoModal activeVideo={activeVideo} onClose={() => setActiveVideo(null)} />
+      <VideoModal activeVideo={activeVideo} onClose={closeVideo} />
     </div>
   );
 }
