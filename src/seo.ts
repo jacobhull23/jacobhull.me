@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://jacobhull.me';
+export const SITE_URL = 'https://www.jacobhull.me';
 
 export interface PageMeta {
   title: string;
