@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Project } from '../../types';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 interface CompactProjectCardProps {
   project: Project;

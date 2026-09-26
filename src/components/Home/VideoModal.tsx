@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 
@@ -18,6 +18,22 @@ export default function VideoModal({ activeVideo, onClose }: VideoModalProps) {
     return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
   };
 
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  // Esc closes the dialog; focus moves into it on open and back to the
+  // "Watch Preview" button that opened it on close.
+  useEffect(() => {
+    if (!activeVideo) return;
+    const opener = document.activeElement as HTMLElement | null;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    closeRef.current?.focus();
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      opener?.focus();
+    };
+  }, [activeVideo, onClose]);
+
   return (
     <AnimatePresence>
       {activeVideo && (
@@ -26,6 +42,9 @@ export default function VideoModal({ activeVideo, onClose }: VideoModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Project video"
         >
           <div 
             className="absolute inset-0 bg-[#151927]/95 backdrop-blur-xl" 
@@ -38,7 +57,9 @@ export default function VideoModal({ activeVideo, onClose }: VideoModalProps) {
             className="relative w-full max-w-6xl aspect-video bg-black shadow-2xl border-2 border-white/10"
           >
             <motion.button
+              ref={closeRef}
               onClick={onClose}
+              aria-label="Close video"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="absolute -top-12 right-0 md:-right-12 text-white/60 hover:text-white transition-colors cursor-pointer group"

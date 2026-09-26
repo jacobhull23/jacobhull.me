@@ -3,7 +3,10 @@ import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Writing } from '../../types';
-import { cn } from '../../lib/utils';
+
+// Created once at module level; creating it inside the component would give
+// React a new component type on every render and remount the link.
+const MotionLink = motion.create(Link);
 
 interface WritingCardProps {
   writing: Writing;
@@ -11,7 +14,6 @@ interface WritingCardProps {
 
 const WritingCard: React.FC<WritingCardProps> = ({ writing }) => {
   const isInternal = writing.link.startsWith('/');
-  const MotionLink = motion(Link);
   
   const cardContent = (
     <>
@@ -23,7 +25,6 @@ const WritingCard: React.FC<WritingCardProps> = ({ writing }) => {
             src={writing.image} 
             alt="" 
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
         </div>
@@ -46,7 +47,6 @@ const WritingCard: React.FC<WritingCardProps> = ({ writing }) => {
                 src={writing.publicationLogo} 
                 alt={writing.publication} 
                 className="h-full w-auto object-contain opacity-40 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
-                referrerPolicy="no-referrer"
               />
             </div>
           ) : (

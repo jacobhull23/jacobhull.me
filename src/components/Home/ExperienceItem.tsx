@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Experience } from '../../types';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 interface ExperienceItemProps {
   exp: Experience;
@@ -48,7 +48,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
                   exp.company === 'KPV LAB' && "mix-blend-multiply"
                 )}
                 style={exp.company === 'Riot Games' ? { clipPath: 'circle(45%)' } : {}}
-                referrerPolicy="no-referrer"
               />
             </div>
           )}

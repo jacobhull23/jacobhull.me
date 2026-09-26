@@ -87,7 +87,6 @@ export default function Hero() {
                   src="/images/jacob-hull.webp" 
                   alt="Jacob Hull" 
                   className="w-full h-full object-cover origin-bottom scale-105 group-hover:scale-100 transition-transform duration-1000"
-                  referrerPolicy="no-referrer"
                 />
                 {/* Subtle texture overlay for editorial feel */}
                 <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('/images/textures/paper-fibers.webp')]" />
@@ -110,7 +109,6 @@ export default function Hero() {
                   src="/images/logos/riot-games.webp" 
                   alt="Riot Games" 
                   className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
                 />
               </motion.div>
 

@@ -49,7 +49,6 @@ export default function ArticleLayout({
             src={headerImage} 
             alt={title}
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#ece5de] via-transparent to-transparent" />
         </div>
@@ -88,6 +87,7 @@ export default function ArticleLayout({
 
             <div className="prose prose-lg prose-primary max-w-none 
               prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:font-bold
+              prose-h2:text-[1.3333333em] prose-h2:leading-[1.5] prose-h2:mt-[1.6666667em] prose-h2:mb-[0.6666667em]
               prose-p:text-[#151927]/80 prose-p:leading-relaxed prose-p:mb-8
               prose-img:rounded-none prose-img:shadow-2xl prose-img:my-12
               prose-strong:text-primary

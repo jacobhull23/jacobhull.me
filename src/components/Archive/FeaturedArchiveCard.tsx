@@ -3,6 +3,10 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Writing } from '../../types';
 
+// Created once at module level; creating it inside the component would give
+// React a new component type on every render and remount the link.
+const MotionLink = motion.create(Link);
+
 interface FeaturedArchiveCardProps {
   article: Writing;
   index: number;
@@ -10,7 +14,6 @@ interface FeaturedArchiveCardProps {
 
 const FeaturedArchiveCard: React.FC<FeaturedArchiveCardProps> = ({ article, index }) => {
   const isInternal = article.link.startsWith('/');
-  const MotionLink = motion(Link);
   
   const cardContent = (
     <>
@@ -20,7 +23,6 @@ const FeaturedArchiveCard: React.FC<FeaturedArchiveCardProps> = ({ article, inde
             src={article.image} 
             alt="" 
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100 opacity-30 group-hover:opacity-60"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#151927]/80 via-transparent to-transparent" />
@@ -36,9 +38,9 @@ const FeaturedArchiveCard: React.FC<FeaturedArchiveCardProps> = ({ article, inde
           <span className="text-[10px] font-mono uppercase tracking-widest text-white/60 mb-2 block">
             {article.publication}
           </span>
-          <h3 className="text-2xl md:text-3xl font-display font-bold uppercase tracking-tight text-white group-hover:text-primary transition-colors leading-tight">
+          <h2 className="text-2xl md:text-3xl font-display font-bold uppercase tracking-tight text-white group-hover:text-primary transition-colors leading-tight">
             {article.title}
-          </h3>
+          </h2>
         </div>
       </div>
     </>

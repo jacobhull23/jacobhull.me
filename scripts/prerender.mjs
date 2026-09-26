@@ -33,6 +33,16 @@ for (const url of routes) {
   console.log(`prerendered ${url} -> dist/${file}`);
 }
 
+// Any unknown URL on GitHub Pages is answered with 404.html (HTTP 404); it
+// renders the router's catch-all NotFound page and hydrates like other routes.
+fs.writeFileSync(
+  path.join(dist, '404.html'),
+  template
+    .replace(/<!-- seo:start[\s\S]*?<!-- seo:end -->/, renderHead('/404'))
+    .replace('<div id="root"></div>', `<div id="root">${render('/404')}</div>`),
+);
+console.log('prerendered 404 -> dist/404.html');
+
 // Sitemap is generated from the same route list, so new pages are included automatically.
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
