@@ -24,7 +24,7 @@ export default function Privacy() {
             Privacy <span className="text-primary">notice</span>
           </h1>
 
-          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:font-bold prose-p:text-foreground/80 prose-li:text-foreground/80 prose-a:text-foreground prose-a:underline hover:prose-a:text-primary">
+          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:font-bold prose-p:text-foreground/80 prose-li:text-foreground/80 prose-a:text-foreground prose-a:underline prose-a:hover:text-primary">
             <p>
               This is the personal portfolio of Jacob Hull. It doesn't sell anything, doesn't use analytics or
               advertising, and doesn't set cookies of its own. This page explains the little personal information
