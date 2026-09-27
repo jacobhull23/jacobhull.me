@@ -42,6 +42,10 @@ branch and open a PR.
 - Keep the brand coral `#fb5057` (from VALORANT branding) even though small
   red text fails WCAG contrast; everything else should pass AA.
 - Keep the visual design; propose design changes rather than making them.
+- The footer copyright year updates itself (`src/components/Footer.tsx` sets
+  the current year in the browser after load), so nothing needs changing on
+  1 January. If you touch the footer, keep that behaviour; the privacy page's
+  "Last updated" date is separate and only changes when the notice does.
 - `/privacy` (`src/Privacy.tsx`) describes exactly what data the site handles
   (FormSubmit contact form, GitHub Pages logs, YouTube privacy-enhanced embeds).
   Update it, including the "Last updated" date, whenever that changes (e.g.
