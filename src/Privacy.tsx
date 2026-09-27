@@ -3,6 +3,10 @@ import Footer from './components/Footer';
 
 const UPDATED = '27 September 2026';
 
+// Styled per link (not via prose-a variants) so hover applies to the hovered
+// link only, consistently across browsers, matching other links on the site.
+const linkClass = 'text-foreground underline hover:text-primary transition-colors';
+
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex flex-col">
@@ -24,7 +28,7 @@ export default function Privacy() {
             Privacy <span className="text-primary">notice</span>
           </h1>
 
-          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:font-bold prose-p:text-foreground/80 prose-li:text-foreground/80 prose-a:text-foreground prose-a:underline prose-a:hover:text-primary">
+          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:font-bold prose-p:text-foreground/80 prose-li:text-foreground/80">
             <p>
               This is the personal portfolio of Jacob Hull. It doesn't sell anything, doesn't use analytics or
               advertising, and doesn't set cookies of its own. This page explains the little personal information
@@ -34,7 +38,7 @@ export default function Privacy() {
             <h2>Contact form</h2>
             <p>
               If you send a message through the contact form, your <strong>name, email address and message</strong> are
-              delivered to me by email using <a href="https://formsubmit.co" target="_blank" rel="noopener noreferrer">FormSubmit</a>,
+              delivered to me by email using <a href="https://formsubmit.co" target="_blank" rel="noopener noreferrer" className={linkClass}>FormSubmit</a>,
               a form-delivery service based in the United States. I use these details only to read and reply to your
               message. They aren't shared, sold, or added to any mailing list.
             </p>
@@ -45,15 +49,15 @@ export default function Privacy() {
 
             <h2>Hosting</h2>
             <p>
-              The site is hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+              The site is hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" className={linkClass}>GitHub Pages</a>.
               Like most web hosts, GitHub may log technical information such as your IP address to keep the service
-              secure. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>.
+              secure. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer" className={linkClass}>GitHub's privacy statement</a>.
             </p>
 
             <h2>Video previews</h2>
             <p>
               Project videos are embedded from YouTube in privacy-enhanced mode and only load when you choose to play
-              one. YouTube's own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a> applies
+              one. YouTube's own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className={linkClass}>privacy policy</a> applies
               to those videos.
             </p>
 
@@ -66,8 +70,8 @@ export default function Privacy() {
             <h2>Your choices</h2>
             <p>
               To ask what information I hold about you, or to have it deleted, send a message through the{' '}
-              <a href="/#contact">contact form</a> or reach me on{' '}
-              <a href="https://www.linkedin.com/in/jacobhull" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+              <a href="/#contact" className={linkClass}>contact form</a> or reach me on{' '}
+              <a href="https://www.linkedin.com/in/jacobhull" target="_blank" rel="noopener noreferrer" className={linkClass}>LinkedIn</a>.
             </p>
           </div>
         </div>
