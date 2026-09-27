@@ -15,7 +15,7 @@ export default function VideoModal({ activeVideo, onClose }: VideoModalProps) {
     } else if (url.includes('youtube.com/watch?v=')) {
       videoId = url.split('watch?v=')[1].split('&')[0];
     }
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
   };
 
   const closeRef = useRef<HTMLButtonElement>(null);

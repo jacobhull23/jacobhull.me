@@ -19,11 +19,16 @@ export default function Footer() {
           <a href="/#experience" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Studio History</a>
           <a href="/#writing" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Publications</a>
           <a href="/#contact" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Contact</a>
+          <Link to="/privacy" className="hover:text-primary hover:opacity-100 transition-all cursor-pointer">Privacy</Link>
         </div>
         <div className="text-[11px] font-mono uppercase tracking-widest opacity-75" suppressHydrationWarning>
           © {new Date().getFullYear()} Jacob Hull.
         </div>
       </div>
+      <p className="max-w-7xl mx-auto mt-12 text-center text-[11px] leading-relaxed text-foreground/70">
+        Game names, logos and artwork are trademarks and copyright of their respective owners, shown here to illustrate
+        work I contributed to.
+      </p>
     </footer>
   );
 }
