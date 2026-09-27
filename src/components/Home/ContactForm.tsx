@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, Linkedin, Send } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -171,6 +172,10 @@ export default function ContactForm() {
                   </span>
                 )}
               </Button>
+              <p className="text-xs text-[#ece5de]/70 leading-relaxed">
+                Your details are only used to reply to your message.{' '}
+                <Link to="/privacy" className="underline hover:text-primary">Privacy notice</Link>
+              </p>
             </form>
             )}
           </Card>

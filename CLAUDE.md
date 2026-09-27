@@ -42,6 +42,10 @@ branch and open a PR.
 - Keep the brand coral `#fb5057` (from VALORANT branding) even though small
   red text fails WCAG contrast; everything else should pass AA.
 - Keep the visual design; propose design changes rather than making them.
+- `/privacy` (`src/Privacy.tsx`) describes exactly what data the site handles
+  (FormSubmit contact form, GitHub Pages logs, YouTube privacy-enhanced embeds).
+  Update it, including the "Last updated" date, whenever that changes (e.g.
+  adding analytics, cookies or a new form provider).
 
 ## Working style
 

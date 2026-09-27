@@ -31,6 +31,12 @@ export const PAGE_META: Record<string, PageMeta> = {
     image: '/images/og/shadow-warrior-2-preview.jpg',
     type: 'article',
   },
+  '/privacy': {
+    title: 'Privacy Notice | Jacob Hull',
+    description: 'How jacobhull.me handles personal information: the contact form, hosting, and embedded videos.',
+    image: DEFAULT_IMAGE,
+    type: 'website',
+  },
 };
 
 export const NOT_FOUND_TITLE = 'Page not found | Jacob Hull';
