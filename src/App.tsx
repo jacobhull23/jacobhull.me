@@ -10,12 +10,20 @@ import { PAGE_META, NOT_FOUND_TITLE } from './seo';
 export default function App() {
   const location = useLocation();
 
-  // Scroll to top on route change
+  // On navigation, jump to the #section in the URL if there is one (e.g.
+  // /#contact from the footer on another page); otherwise start at the top.
   React.useEffect(() => {
-    window.scrollTo(0, 0);
     const meta = PAGE_META[location.pathname];
     document.title = meta ? meta.title : NOT_FOUND_TITLE;
-  }, [location.pathname]);
+    if (location.hash) {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) {
+        target.scrollIntoView();
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+  }, [location.pathname, location.hash]);
 
   return (
     <Routes>
