@@ -27,6 +27,13 @@ branch and open a PR.
   writing). Images are self-hosted WebP in `public/images/` (max 1600px).
 - Fonts are self-hosted copies of the Google Fonts files in `src/fonts/`
   (Fontsource's Space Grotesk renders wider; don't swap it in).
+- OpenCritic scores: `scripts/fetch-opencritic.mjs` runs in the deploy
+  workflow (on push and weekly, Mondays 03:17 UTC) with the
+  `OPENCRITIC_API_KEY` repo secret (RapidAPI, free Basic plan) and writes
+  `src/data/opencritic.json`. Banners prefer that live score and fall back to
+  `criticScore` in `src/constants.ts`; keep the fallbacks roughly current.
+  The committed JSON stays `{}`. To add a game's score, give the project a
+  `criticUrl` (`opencritic.com/game/<id>/…`) and a fallback `criticScore`.
 - Contact form posts to FormSubmit's AJAX endpoint and shows an inline
   success message; without JS it falls back to a normal POST that redirects to
   `/?sent=1#contact`.

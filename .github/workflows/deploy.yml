@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Weekly rebuild (Mondays 03:17 UTC) so OpenCritic scores stay current
+  schedule:
+    - cron: "17 3 * * 1"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -38,6 +42,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: Fetch OpenCritic scores
+        run: node scripts/fetch-opencritic.mjs
+        env:
+          OPENCRITIC_API_KEY: ${{ secrets.OPENCRITIC_API_KEY }}
       - name: Build
         run: npm run build
       - name: Setup Pages

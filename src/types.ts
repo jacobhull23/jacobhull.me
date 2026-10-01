@@ -33,6 +33,7 @@ export interface Project {
   platforms?: string[];
   videoUrl?: string;
   websiteUrl?: string;
+  /** Fallback OpenCritic score; the live score fetched at build time wins (see scripts/fetch-opencritic.mjs). */
   criticScore?: number;
   criticUrl?: string;
   /** Shown as a smaller card in the "More projects" row instead of a full-screen banner. */

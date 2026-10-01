@@ -18,6 +18,15 @@ prerendered to its own HTML file (`scripts/prerender.mjs`), so deep links such a
 and social-card tags.
 
 Pushing to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
+The same workflow also runs weekly to refresh OpenCritic scores.
+
+## OpenCritic scores
+
+Project banners show OpenCritic's Top Critic Average. During deploy,
+`scripts/fetch-opencritic.mjs` fetches the current scores using the
+`OPENCRITIC_API_KEY` repository secret (a free RapidAPI key for the OpenCritic
+API) and writes them to `src/data/opencritic.json`. If the key is missing or a
+request fails, the banner uses the `criticScore` fallback in `src/constants.ts`.
 
 ## Adding a page
 

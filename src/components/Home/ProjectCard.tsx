@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Play, Globe, Gamepad2, Monitor, Smartphone, Star } from 'lucide-react';
 import { Project } from '../../types';
 import { cn } from '@/lib/utils';
+import liveScores from '../../data/opencritic.json';
 
 interface ProjectCardProps {
   project: Project;
@@ -16,8 +17,15 @@ const getPlatformIcon = (platform: string) => {
   return <Gamepad2 className="h-3 w-3" />;
 };
 
+// Live score fetched at build time if available, otherwise the fallback in constants.
+const getCriticScore = (project: Project): number | undefined => {
+  const id = project.criticUrl?.match(/opencritic\.com\/game\/(\d+)/)?.[1];
+  return (id && (liveScores as Record<string, number>)[id]) || project.criticScore;
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) => {
   const projectColor = project.color || '#fb5057';
+  const criticScore = getCriticScore(project);
   
   return (
     <motion.div 
@@ -78,7 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                     {project.status}
                   </span>
                 )}
-                {project.criticScore && (
+                {criticScore && (
                   <motion.a 
                     href={project.criticUrl} 
                     target="_blank" 
@@ -92,7 +100,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onWatchPreview }) =>
                       <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/80 group-hover/score:text-white transition-colors leading-none">OpenCritic</span>
                     </div>
                     <div className="h-3 w-px bg-white/20" />
-                    <span className="text-sm font-display font-bold text-white leading-none">{project.criticScore}</span>
+                    <span className="text-sm font-display font-bold text-white leading-none">{criticScore}</span>
                   </motion.a>
                 )}
               </div>
